@@ -41,5 +41,5 @@ abstract class BaseFragment<B : ViewDataBinding>(
         super.onViewCreated(view, savedInstanceState)
         mBinding.initViews()
     }
-
+//comment
 }
