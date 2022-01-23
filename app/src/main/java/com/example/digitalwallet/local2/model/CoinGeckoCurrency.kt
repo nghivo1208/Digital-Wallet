@@ -6,10 +6,10 @@ import androidx.room.PrimaryKey
 
 @Parcelize
 @Entity
-data class CoingeckoCurrency(
-    @PrimaryKey val base: String,
+data class CoinGeckoCurrency(
+    @PrimaryKey val marketCap: Int,
     val name: String,
-    val buyPrice: Double,
-    val sellPrice: Double,
-    val icon: String
+    val currentPrice: Double,
+    val symbol: String,
+    val image: String
 ) : Parcelable

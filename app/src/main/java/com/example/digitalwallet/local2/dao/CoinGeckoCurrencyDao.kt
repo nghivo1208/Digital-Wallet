@@ -5,25 +5,25 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.digitalwallet.local.model.Currency
+import com.example.digitalwallet.local2.model.CoinGeckoCurrency
 
 interface CoinGeckoCurrencyDao {
-    @Query("SELECT * FROM Currency")
-    fun getFavoriteListLive(): LiveData<List<Currency>>
+    @Query("SELECT * FROM CoinGeckoCurrency")
+    fun getFavoriteListLive(): LiveData<List<CoinGeckoCurrency>>
 
-    @Query("SELECT * FROM Currency")
-    suspend fun getFavoriteList(): List<Currency>
+    @Query("SELECT * FROM CoinGeckoCurrency")
+    suspend fun getFavoriteList(): List<CoinGeckoCurrency>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(item: Currency)
+    suspend fun insert(item: CoinGeckoCurrency)
 
     @Update
-    suspend fun update(item: Currency)
+    suspend fun update(item: CoinGeckoCurrency)
 
-    @Query("DELETE FROM Currency WHERE base = :base")
+    @Query("DELETE FROM CoinGeckoCurrency WHERE base = :base")
     suspend fun delete(base: String)
 
-    @Query("DELETE FROM Currency")
+    @Query("DELETE FROM CoinGeckoCurrency")
     suspend fun delete()
 
 }
