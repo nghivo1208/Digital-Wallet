@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class NewCurrencyResponse(
+data class CoinGeckoCurrencyResponse(
     @Json(name = "name") val name: String?,
     @Json(name = "symbol") val symbol: String?,
     @Json(name = "current_price") val currentPrice: Double?,
