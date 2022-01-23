@@ -5,10 +5,10 @@ import androidx.room.RoomDatabase
 import com.example.digitalwallet.local.dao.CurrencyDao
 import com.example.digitalwallet.local.model.Currency
 import com.example.digitalwallet.local2.dao.CoinGeckoCurrencyDao
-import com.example.digitalwallet.local2.model.CoingeckoCurrency
+import com.example.digitalwallet.local2.model.CoinGeckoCurrency
 
 @Database(
-    entities = [Currency::class, CoingeckoCurrency::class],
+    entities = [Currency::class, CoinGeckoCurrency::class],
     version = 1,
     exportSchema = true
 )
